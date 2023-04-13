@@ -27,6 +27,8 @@ package.shuZu
 public class ArrayTest02{
   public static void main(String[] args){
       int[] arr = {3,1,6,2,5};
+      int count = 0;
+      int count2 = 0;
       for(int i = 0; i < arr.length - 1; i++){
           //i正好是“参加比较的这堆数据中”最左边元素的下标
           //System.out.println(i);
@@ -35,6 +37,7 @@ public class ArrayTest02{
           int min = i;
           for(int j = i + 1; j < arr.length; j++){
               //System.out.println("-->" + j); 
+              count++;
               if(arr[j] < arr[min]{
               min = j;//最小值的下标元素是j
               }
@@ -45,10 +48,16 @@ public class ArrayTest02{
           temp = arr[min];
           arr[min] = arr[i];
           arr[i] = temp;
+          count2++;
           }
       }
+      //冒泡排序和选择排序实际上比较次数一致，交换位置的次数选择排序较少。
+      System.out.println("交换次数：" + count);
+      System.out.println("比较次数：" + count2);
+      
       //排序之后遍历
       for(int i = 0; i < arr.length; i++) {
       System.out.println(arr[i]);
+      }
   }
 }
