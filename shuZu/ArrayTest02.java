@@ -16,6 +16,12 @@ package.shuZu
     参与比较的数据 6 5 
     第四次循环之后的结果 5 6(最左边元素下标为3) 
 注意：5条数据循环4次
+关键点：选择排序中的关键在于，怎么找出最小的 
+       3和2比较，2更小，此时最小的是2
+       继续拿着2往下比对，2和6比较，2仍是最小的
+       继续拿着2往下比对，2和1比较，1更小，此时最小的是1
+       继续拿着1往下比对，1和5比较，还是1最小，所以1就是最小的
+       以此类推
 */
 
 public class ArrayTest02{
@@ -23,7 +29,26 @@ public class ArrayTest02{
       int[] arr = {3,1,6,2,5};
       for(int i = 0; i < arr.length - 1; i++){
           //i正好是“参加比较的这堆数据中”最左边元素的下标
-          System.out.println(i);
-      }  
+          //System.out.println(i);
+          //i是一个参与比较的这堆数据中的起点下标
+          //假设起点i下标位置上的元素是最小的
+          int min = i;
+          for(int j = i + 1; j < arr.length; j++){
+              //System.out.println("-->" + j); 
+              if(arr[j] < arr[min]{
+              min = j;//最小值的下标元素是j
+              }
+          }
+      //当i和min相等时，表示最初假设是对的。反之表示有比这更小的元素，需要拿着这个更小的元素和最左边的元素交换位置。
+          if(min != i){
+          int temp;
+          temp = arr[min];
+          arr[min] = arr[i];
+          arr[i] = temp;
+          }
+      }
+      //排序之后遍历
+      for(int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i]);
   }
 }
