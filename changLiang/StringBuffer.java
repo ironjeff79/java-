@@ -20,7 +20,7 @@ package changLiang;
        最好减少底层数组的扩容次数
 */
 
-public class StringBufferTest01{
+public class StringBuffer{
     public static void main(String[] args){
         //创建一个初始化容量为16个byte[] 的数组。（字符串缓冲区对象）
         StringBuffer stringBuffer = new StringBuffer();
