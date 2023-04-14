@@ -17,8 +17,9 @@ public class ArraySearch {
         //需求：找出89下标，如果没有返回-1
         for(int i = 0; i < arr.length; i++){
         	if(arr[i] == 89){
-        		System.out.println("89元素的下标是：" + i);
-            }
+        	    System.out.println("89元素的下标是：" + i);
+		    return;
+                }
         }
         //程序执行到此处表示没有89
         System.out.println("89元素不存在");
