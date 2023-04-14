@@ -19,8 +19,8 @@ HelloWorld!
 */
 
 public class String03{
-	public static void main(String[] args){
-		//创建字符串对象最常用的一种方式
+    public static void main(String[] args){
+        //创建字符串对象最常用的一种方式
         String s1 = "hello world!";
         //s1这个变量中保存的是一个内存地址。按说应该输出一个地址
         //但是输出的是一个字符串，说明String类已经重写了toString()方法。
