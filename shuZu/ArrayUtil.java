@@ -23,7 +23,7 @@ arr数组 10(下标0) 11 12 13 14 15 16 17 18 19 20(下标10)
     找到的中间元素正好和被找的元素18相等，表示找到了。下标为8。
 */
 public class ArrayUtil {
-	public static void main(String[] args){
+    public static void main(String[] args){
 		int[] arr = {100,200,230,235,600,1000,2000,9999};
         
         //找出arr这个数组中200所在的下标
