@@ -1,5 +1,13 @@
 package changLiang;
-
+/*运行结果
+hello world!
+abc
+bc
+我是中国人
+中国人
+HelloWorld!
+ 
+*/
 /*
 关于String类中的构造方法
     1. String s = new String("");
@@ -11,8 +19,8 @@ package changLiang;
 */
 
 public class String03{
-    public static void main(String[] args){
-        //创建字符串对象最常用的一种方式
+	public static void main(String[] args){
+		//创建字符串对象最常用的一种方式
         String s1 = "hello world!";
         //s1这个变量中保存的是一个内存地址。按说应该输出一个地址
         //但是输出的是一个字符串，说明String类已经重写了toString()方法。

@@ -1,5 +1,11 @@
 package changLiang;
-
+/*运行结果
+false
+false
+true
+true
+true
+ */
 /*
 关于java JDK中内置的一个类: java.lang.String
     1. String表示字符串类型，属于引用数据类型，不属于基本数据类型。
@@ -9,8 +15,8 @@ package changLiang;
     5. !!!注意：JDK新版本中"字符串常量池"被移动到"堆内存"中了
 */
 public class String01{
-    public static void main(String[] args){
-        int i = 0; //i变量中保存的是100这个值
+	public static void main(String[] args){
+		int i = 0; //i变量中保存的是100这个值
         String s = "ABC"; //s变量中保存的是字符串对象在“字符串常量池”当中的内存地址。不是"ABC",而是0x1111。
         
         //这两行代码表示底层创建了3个字符串对象，都在字符串常量池当中
@@ -38,7 +44,6 @@ public class String01{
         String k = new String("testString");
         //"testString"这个字符串后面可以加"."  因为"testString"是一个String字符串对象。只要是对象都能调用方法。
         System.out.println("testString".equals(k));  //建议使用这种方式，因为这个可以避免空指针异常。
-        System.out.println(k.equals("testString"));  //存在空指针异常的风险。
-       
+        System.out.println(k.equals("testString"));  //存在空指针异常的风险。      
     }
 }
