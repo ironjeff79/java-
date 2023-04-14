@@ -29,106 +29,106 @@ package changLiang;
 
 public class String04{
     public static void main(String[] args){
-          //char charAt(int index)   
-          char c = "中国人".charAt(1);  //"中国人"是一个字符串String对象，只要是对象就能"."
-          System.out.println(c); //国
+        //char charAt(int index)   
+        char c = "中国人".charAt(1);  //"中国人"是一个字符串String对象，只要是对象就能"."
+        System.out.println(c); //国
     
-          //int compareTo(String anotherString)
-          int result = "abc".compareTo("abc");
-          System.out.println(result);  //0  前后一致
+        //int compareTo(String anotherString)
+        int result = "abc".compareTo("abc");
+        System.out.println(result);  //0  前后一致
     
-          int result2 = "abcd".compareTo("abce");  
-          System.out.println(result2);  //-1  前小后大
+        int result2 = "abcd".compareTo("abce");  
+        System.out.println(result2);  //-1  前小后大
     
-          int result3 = "abce".compareTo("abcd");  
-          System.out.println(result3);  //1  前大后小
+        int result3 = "abce".compareTo("abcd");  
+        System.out.println(result3);  //1  前大后小
     
-          //拿着字符串第一个字母和后面字符串的第一个字母比较。能分胜负就不再比较。
-          System.out.println("xyz".compareTo("yxz")); //-1
+        //拿着字符串第一个字母和后面字符串的第一个字母比较。能分胜负就不再比较。
+        System.out.println("xyz".compareTo("yxz")); //-1
+         
+        //boolean contains (CharSequence s)
+        System.out.println("HelloWorld.java".contains(".java")); //true
+        System.out.println("Http://www.baidu.com".contains("Https://")); //true
           
-          //boolean contains (CharSequence s)
-          System.out.println("HelloWorld.java".contains(".java")); //true
-          System.out.println("Http://www.baidu.com".contains("Https://")); //true
+        //boolean endsWith(String suffix)
+        System.out.println("test.txt".endsWith(".java")); //false
+        System.out.println("test.txt".endsWith(".txt")); //true
           
-          //boolean endsWith(String suffix)
-          System.out.println("test.txt".endsWith(".java")); //false
-          System.out.println("test.txt".endsWith(".txt")); //true
+        //boolean equals(Object anObject)
+        //equals方法有没有调用compareTo方法？老版本可以看一下。JDK13中并没有调用此方法。
+        //equals方法只能看出相等不相等，compareTo方法可以看出是否相等，并判断出谁大谁小。
+        System.out.println("abc".equals("abc")); //true
           
-          //boolean equals(Object anObject)
-          //equals方法有没有调用compareTo方法？老版本可以看一下。JDK13中并没有调用此方法。
-          //equals方法只能看出相等不相等，compareTo方法可以看出是否相等，并判断出谁大谁小。
-          System.out.println("abc".equals("abc")); //true
+        //boolean equalsIgnoreCase(String anotherString)
+        System.out.println("ABc".equalsIgnoreCase("abC")); //true
           
-          //boolean equalsIgnoreCase(String anotherString)
-          System.out.println("ABc".equalsIgnoreCase("abC")); //true
+        //byte[] getBytes()
+        byte [] bytes = "abcdef".getBytes();
+        for(int i = 0; i < bytes.length; i++){
+            System.out.println(byte[i]);
+        }
+        
+        //int indexOf(String str)
+        System.out.println("oraclejavac++.netc#phppythonjavaoraclec++".indexOf("java")); //6
           
-          //byte[] getBytes()
-          byte [] bytes = "abcdef".getBytes();
-          for(int i = 0; i < bytes.length; i++){
-              System.out.println(byte[i]);
-          }
-          
-          //int indexOf(String str)
-          System.out.println("oraclejavac++.netc#phppythonjavaoraclec++".indexOf("java")); //6
-          
-          //boolean isEmpty()
-          String s = " ";
-          System.out.println(s.isEmpty()); //true 
+        //boolean isEmpty()
+        String s = " ";
+        System.out.println(s.isEmpty()); //true 
                 
-          //int length()
-          System.out.println("abc".length()); //3
+        //int length()
+        System.out.println("abc".length()); //3
+         
+        //String replace(CharSequence target, CharSequence repalcement)
+        System.out.println("http://www.baidu.com".repalce("http://","https://")); //https://www.baidu.com
+        //把以下字符串的" = "号替换成" : "
+        System.out.println("name=zhangsan&password=123&age=20".repalce(" = "," : ")); 
           
-          //String replace(CharSequence target, CharSequence repalcement)
-          System.out.println("http://www.baidu.com".repalce("http://","https://")); //https://www.baidu.com
-          //把以下字符串的" = "号替换成" : "
-          System.out.println("name=zhangsan&password=123&age=20".repalce(" = "," : ")); 
+        //String[] split(String regex)
+        String[] ymd = "2020-01-01".spilt("-");
+        for(int i = 0; i < ymd.length; i++){
+            System.out.println(ymd[i]); 
+        }
           
-          //String[] split(String regex)
-          String[] ymd = "2020-01-01".spilt("-");
-          for(int i = 0; i < ymd.length; i++){
-              System.out.println(ymd[i]); 
-          }
+        String param = "name=zhangsan&password=123&age=20";
+        String[] params = param.spilt("&");
+        for(int i = 0; i < params.length; i++){
+            System.out.println(params[i]);
+        }
+        //boolean startsWith(String prefix)
+        System.out.println("http://www.baidu.com".startsWith("http")); //true
           
-          String param = "name=zhangsan&password=123&age=20";
-          String[] params = param.spilt("&");
-          for(int i = 0; i < params.length; i++){
-              System.out.println(params[i]);
-          }
-          //boolean startsWith(String prefix)
-          System.out.println("http://www.baidu.com".startsWith("http")); //true
+        //String substring(int beginIndex)
+        System.out.println("http://www.baidu.com".substring(7)); //www.baidu.com
           
-          //String substring(int beginIndex)
-          System.out.println("http://www.baidu.com".substring(7)); //www.baidu.com
+        //String substring(int beginIndex,int endIndex)
+        System.out.println("http://www.baidu.com".substring(7,10)); //www 7包含 10不包含 左闭右开
           
-          //String substring(int beginIndex,int endIndex)
-          System.out.println("http://www.baidu.com".substring(7,10)); //www 7包含 10不包含 左闭右开
+        //char[] toCharArray
+        char[] chars = "我是中国人".toCharArray();
+        for(int i = 0; i < chars.length; i++){
+            System.out.println(chars[i]);
+        }
           
-          //char[] toCharArray
-          char[] chars = "我是中国人".toCharArray();
-          for(int i = 0; i < chars.length; i++){
-              System.out.println(chars[i]);
-          }
-          
-          //String toLowerCase()
-          System.out.println("ABCdefXYZ".toLowCase());
-          
-          //String trim()
-          System.out.println("      hello   world       ".trim()); //hello   world
-          
-          //静态方法 用类名去
-          String s1 = String.valueOf(3.14);
-          System.out.println(s1);
-          //这个静态的valueOf()方法，参数是一个对象的时候，会自动调用该对象的toString()方法吗？
-          String s2 = String.valueOf(new Customer());
-          //System.out.println(s2);  没有重写toString()方法之前是对象内存地址
-          System.out.println(s2);  //我是一个VIP客户！！！
+        //String toLowerCase()
+        System.out.println("ABCdefXYZ".toLowCase());
+        
+        //String trim()
+        System.out.println("      hello   world       ".trim()); //hello   world
+         
+        //静态方法 用类名去
+        String s1 = String.valueOf(3.14);
+        System.out.println(s1);
+        //这个静态的valueOf()方法，参数是一个对象的时候，会自动调用该对象的toString()方法吗？
+        String s2 = String.valueOf(new Customer());
+        //System.out.println(s2);  没有重写toString()方法之前是对象内存地址
+        System.out.println(s2);  //我是一个VIP客户！！！
           
           
-          Object obj = new Object();
-          //通过源代码可以看出：为什么输出一个引用的时候，会调用toString()方法！ 先调String.valueOf,再调.toString()
-          System.out.println(obj);
-          //能够在控制台上显示出来的其实都是字符串 。
-          //本质上System.out.println()这个方法在输出任何数据的时候都是先转换成字符串，再输出。
+        Object obj = new Object();
+        //通过源代码可以看出：为什么输出一个引用的时候，会调用toString()方法！ 先调String.valueOf,再调.toString()
+        System.out.println(obj);
+        //能够在控制台上显示出来的其实都是字符串 。
+        //本质上System.out.println()这个方法在输出任何数据的时候都是先转换成字符串，再输出。
                 
     }
 }
