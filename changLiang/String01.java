@@ -15,8 +15,8 @@ true
     5. !!!注意：JDK新版本中"字符串常量池"被移动到"堆内存"中了
 */
 public class String01{
-	public static void main(String[] args){
-		int i = 0; //i变量中保存的是100这个值
+    public static void main(String[] args){
+        int i = 0; //i变量中保存的是100这个值
         String s = "ABC"; //s变量中保存的是字符串对象在“字符串常量池”当中的内存地址。不是"ABC",而是0x1111。
         
         //这两行代码表示底层创建了3个字符串对象，都在字符串常量池当中
