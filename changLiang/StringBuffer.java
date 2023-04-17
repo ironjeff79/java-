@@ -21,6 +21,20 @@ helloworld
        关键点：给一个合适的初始化容量 可以提高程序的执行效率
        在创建stringBuffer的时候尽可能给定一个初始化容量
        最好减少底层数组的扩容次数
+  
+  !!!  面试题 String为什么是不可变的？
+       源代码中，String类中有一个byte[]数组，这个byte[]数组采用了final修饰，因为数组一旦创建长度不可变。
+       并且被final修饰的引用，一旦指向某个对象之后，不可再指向其他对象，所以String是不可变的。
+       
+       StringBuilder/StringBuffer为什么是可变的呢？
+       源代码中，StringBuilder/StringBuffer内部实际上是一个byte[]数组，这个byte[]数组没有被final修饰。
+       StringBuilder/StringBuffer的初始化容量是16，当存满之后会进行扩容，底层调用了数组拷贝的方法。
+       System.arraycopy(); 是这样扩容的。
+       所以StringBuilder/StringBuffer适合于使用字符串的频繁拼接操作。
+       
+       String s = "abc";
+       s变量是可以指向其他对象的。
+       字符串不可变不是说变量不可变。说的是"abc"这个对象不可变。是双引号里面的字符串对象一旦创建不可变。
 */
 
 public class StringBuffer{
