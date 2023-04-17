@@ -42,6 +42,10 @@ java.lang.Object@182decdb
       19.String toUpperCase() 转换为大写
       20.String trim() 去除字符串前后空白
       21.String中只有一个方法是静态的 不需要new对象 这个方法叫做valueOf  将非字符串转换为字符串
+      
+   ***String为什么是不可变的？
+      String类中有一个Byte数组，并且这个数组是使用final修饰的。
+   
 */
 
 public class String04{
