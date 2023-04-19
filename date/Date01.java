@@ -1,7 +1,10 @@
 package date;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-/*
+/*运行结果
+Wed Apr 19 18:44:50 JST 2023
+2023-04-19 18:44:50
+Fri Aug 08 08:08:08 JST 2008
 java中对日期的处理
 这个案例最主要掌握：知识点1 怎么获取系统当前时间
                    知识点2 String --> Date
