@@ -2,6 +2,12 @@ package date;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/* 运行结果
+1970-01-01 09:00:00 001
+2023-04-18 18:46:53 669
+2023-04-02 18:06:24 741
+
+*/
 public class Date03 {
 	public static void main(String[] args) {
 		
