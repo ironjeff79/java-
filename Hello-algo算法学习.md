@@ -128,3 +128,11 @@ for (int num : nums) {
 哈希冲突会导致查询结果错误，严重影响哈希表的可用性。为了解决该问题，每当遇到哈希冲突时，我们就进行哈希表扩容，直至冲突消失为止。此方法简单粗暴且有效，但效率太低，因为哈希表扩容需要进行大量的数据搬运与哈希值计算。
 <br><br>
 哈希表的结构改良方法主要包括“链式地址”和“开放寻址”。
+
+<br><br><br>
+# 4--KMP算法 09/03
+## -KMP定义和说明 [知乎](https://www.zhihu.com/question/21923021/answer/281346746)
+## -相关题目 [Leetcode](https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/submissions/560947945/)
+KMP算法的核心，是一个被称为部分匹配表(Partial Match Table)的数组。
+**PMT中的值是字符串的前缀集合与后缀集合的交集中最长元素的长度。**
+<br><br>
