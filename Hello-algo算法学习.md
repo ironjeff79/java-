@@ -133,6 +133,6 @@ for (int num : nums) {
 # 4--KMP算法 09/03
 ## -KMP定义和说明 [知乎](https://www.zhihu.com/question/21923021/answer/281346746)
 ## -相关题目 [Leetcode](https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/submissions/560947945/)
-KMP算法的核心，是一个被称为部分匹配表(Partial Match Table)的数组。
+KMP算法的核心，是一个被称为部分匹配表(Partial Match Table)的数组。    
 **PMT中的值是字符串的前缀集合与后缀集合的交集中最长元素的长度。**
 <br><br>
